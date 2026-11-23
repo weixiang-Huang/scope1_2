@@ -1,0 +1,13 @@
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+
+[theme]
+primaryColor = "#FF4B4B" # 你可以自訂主色調（按鈕、標籤頁等的顏色）
+backgroundColor = "#FFFFFF" # 將背景設定為純白色
+secondaryBackgroundColor = "#F0F2F6" # 側邊欄（Sidebar）的背景顏色
+textColor = "#31333F" # 文字顏色
+base = "light" # 強制以亮色模式為基礎
