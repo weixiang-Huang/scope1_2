@@ -276,8 +276,9 @@ else:
     st.sidebar.warning("資料庫中無有效年份資料")
     st.stop()
 
-# 2. 產業多重選單 (維持完整 30 餘種產業，支援代碼搜尋)
-all_standard_industries = sorted([f"[{code}] {name}" for name, code in TWSE_INDUSTRY_DICT.items()])
+# 2. 產業多重選單 
+#all_standard_industries = sorted([f"[{code}] {name}" for name, code in TWSE_INDUSTRY_DICT.items()])
+all_standard_industries = sorted(df['標準產業分類'].unique().tolist())
 selected_industries = st.sidebar.multiselect(
     "🏭 選擇產業 (支援代碼搜尋，可多選)", 
     options=all_standard_industries,
