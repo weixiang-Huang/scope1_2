@@ -364,7 +364,7 @@ if not filtered_df.empty:
     st.subheader(f"🏆 碳排放量 Top {top_n} 專業分析圖表")
     
     # 建立三個分頁
-    tab1, tab2, tab3 = st.tabs(["🏭 廠區排放排行 (範疇一+二)", "🔗 供應鏈排行 (範疇三)", "🕵️‍♂️ 漂綠異常稽核 (佔比落差)"])
+    tab1, tab2, tab3 = st.tabs(["🏭 廠區排放排行 (範疇一+二)", "🔗 供應鏈排行 (範疇三)", "🕵️‍♂️ 漂綠異常稽核"])
     
     # 視角一：範疇一+二 排名 (包含所有公司)
     with tab1:
@@ -426,7 +426,7 @@ if not filtered_df.empty:
             
             if not suspect_df.empty:
                 st.dataframe(
-                    suspect_df[['公司名稱', '一二排碳名次', '範疇三名次', '名次落差(正值為嫌疑)', '樣本數的5%','佔比落差']].style.format({
+                    suspect_df[['公司名稱', '一二排碳名次', '範疇三名次', '名次落差(正值為嫌疑)', '樣本數的5%']].style.format({
                         '一二排碳名次': '第 {:.0f} 名',
                         '範疇三名次': '第 {:.0f} 名',
                         '名次落差(正值為嫌疑)': '⬇️ 退步 {:.0f} 名',
